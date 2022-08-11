@@ -1,0 +1,30 @@
+
+service: bot-travel-assistants
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: ap-northeast-1
+
+functions:
+  signinJwt:
+    handler: handler.signinJwt
+    name: signin-jwt
+    memorySize: 128 #mb
+    timeout: 5 #seconds
+    events: 
+      - http:
+          path: jwt_service
+          method: POST
+resources:
+  Resources:
+    NewResource:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: bot-travel-assistants
+  Outputs:
+    NewOutput:
+      Description: "Description for the output"
+      Value: "Some output value"
