@@ -10,7 +10,7 @@
     //botOptions.ttsSocketUrl = '';//deprecated
     botOptions.koreAnonymousFn = koreAnonymousFn;
     botOptions.recorderWorkerPath = '../libs/recorderWorker.js';
-    botOptions.JWTUrl = "https://pxhq5r6r32.execute-api.ap-northeast-1.amazonaws.com/dev/jwt_service";
+    botOptions.JWTUrl = "https://w7eqbs6bi2.execute-api.ap-northeast-1.amazonaws.com/dev/signin-jwt";
     botOptions.userIdentity = 'TonyPham';// Provide users email id here
     botOptions.botInfo = { name: "booking", "_id": "st-10ca7bbe-2ffd-5802-a469-c2ceda5bd860" }; // bot name is case sensitive
 
